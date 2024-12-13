@@ -5,6 +5,8 @@ import { MenuItemsList } from '@/config';
 import { DropdownMenu, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger, DropdownMenuContent } from './ui/dropdown-menu';
 import { Badge } from './ui/badge';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
+import { Switch } from './ui/switch';
+import { Label } from './ui/label';
 
 interface ThemeToggleProps {
   isDarkMode: boolean;
@@ -25,8 +27,8 @@ const MenuItems: React.FC<MenuItemsProps> = ({ setIsSheetOpen }) => {
   const navigate = useNavigate();
 
   const handleNavigate = (path: string) => {
-    setIsSheetOpen(false); 
-    navigate(path); 
+    setIsSheetOpen(false);
+    navigate(path);
   };
 
   return (
@@ -48,24 +50,25 @@ const MenuItems: React.FC<MenuItemsProps> = ({ setIsSheetOpen }) => {
 
 
 const ThemeToggleButton: React.FC<ThemeToggleProps> = ({ isDarkMode, toggleTheme }) => {
+
+  const [isChecked, setIsChecked] = useState(false)
+
+  const handleSwitchChange = (checked: boolean) => {
+    setIsChecked(checked)
+    console.log('Switch value', checked);
+
+  }
   return (
-    <div className="center w-full">
-      <button
-        onClick={toggleTheme}
-        className={`relative w-16 h-8 rounded-full border-2 border-gray-400 transition-all duration-500
-          ${isDarkMode ? 'bg-black' : 'bg-white'}`}
-      >
-        <div
-          className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-yellow-400 transition-all duration-500
-            ${isDarkMode ? 'translate-x-full bg-gray-700' : 'translate-x-0'}`}
-        >
-          {isDarkMode ? (
-            <Moon className="w-full h-full text-white p-1" />
-          ) : (
-            <Sun className="w-full h-full text-yellow-500 p-1" />
-          )}
-        </div>
-      </button>
+    <div className="center w-full p-1">
+      <Switch id='dark-mode'
+        checked={isChecked}
+        onCheckedChange={handleSwitchChange}
+      />
+      <Label htmlFor='dark-mode' className='ml-2'>
+        {
+          isChecked? <Moon />: <Sun />
+        }  
+       </Label>
     </div>
   );
 };
@@ -80,7 +83,7 @@ const HeaderRightContent: React.FC<HeaderRightContentProps> = ({ selectedLanguag
           </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="bg-gray-800 text-white rounded-md shadow-lg py-2 w-3"
+          className="bg-gray-800 text-white rounded-md shadow-lg p-2"
           side="bottom"
           sideOffset={5}
           align="start"
@@ -90,7 +93,7 @@ const HeaderRightContent: React.FC<HeaderRightContentProps> = ({ selectedLanguag
             <ThemeToggleButton isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
           </DropdownMenuLabel>
           <DropdownMenuSeparator className="h-px bg-gray-600 my-2" />
-          <DropdownMenuLabel asChild>
+          <DropdownMenuLabel asChild className='center'>
             <Badge
               className="px-4 py-2 text-center hover:bg-gray-700 rounded cursor-pointer"
               onClick={changeLanguage}
@@ -145,14 +148,14 @@ export const Navbar = () => {
   }, [isSheetOpen]);
 
   return (
-    <nav className="w-full sticky top-0 px-12 py-5 bg-black flex flex-row justify-between">
+    <nav className="w-full fixed top-0 px-12 py-5 bg-black flex flex-row justify-between">
       <div className="md:px-10">
         <Link to={'/'}>
           <House className="nav-icon" />
         </Link>
       </div>
       <div className="w-full max-w-[800px] hidden md:flex flex-col md:flex-row justify-between">
-        <MenuItems setIsSheetOpen={setIsSheetOpen}/>
+        <MenuItems setIsSheetOpen={setIsSheetOpen} />
         <HeaderRightContent
           selectedLanguage={selectedLanguage}
           changeLanguage={changeLanguage}

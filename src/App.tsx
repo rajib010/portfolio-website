@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { Navbar } from "./components/Navbar"
 import Contact from "./pages/Contact"
 import Projects from "./pages/Projects"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <Footer/>
     </div>
   )
 }
