@@ -37,7 +37,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ setIsSheetOpen }) => {
         MenuItemsList.map((menuItem) => (
           <li
             key={menuItem.id}
-            className="relative w-60 text-white font-semibold text-xl group border m-5 rounded-md center p-2 shadow-lg translate hover:-translate-y-1 hover:opacity-90 md:w-20 md:border-none md:m-0 md:p-1"
+            className="cursor-pointer relative w-60 text-white font-semibold text-xl group border m-5 rounded-md center p-2 shadow-lg translate hover:-translate-y-1 hover:opacity-90 md:w-20 md:border-none md:m-0 md:p-1"
             onClick={() => handleNavigate(menuItem.path)}
           >
             {menuItem.label}

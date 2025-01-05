@@ -2,6 +2,7 @@ import React from "react";
 import Skills from "@/components/TechnicalSkills";
 import IntroContent from "@/components/Introcontent";
 import OtherSkills from "@/components/OtherSkills";
+import CVSection from "@/components/CV";
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <IntroContent />
       <Skills />
       <OtherSkills />
+      <CVSection />
     </main>
   );
 }

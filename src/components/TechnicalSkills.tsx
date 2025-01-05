@@ -1,5 +1,4 @@
 import React from "react";
-
 import { TechnicalSkillsInfo } from "@/config";
 import { Card } from "@/components/ui/card";
 

@@ -1,11 +1,18 @@
-import React from "react"
+import React from 'react';
+import userImage from "@/assets/image.jpg"
+import EducationalBackgroundComponent from '@/components/EducationalBackgroud';
+import ExperienceComponent from '@/components/ExperienceCard';
+import CVSection from '@/components/CV';
 
-function About() {
+
+const About = () => {
   return (
     <main className="w-full bg-gray-100 p-4 center mt-[5rem] flex flex-col gap-7">
-      <div>about</div>
+      <EducationalBackgroundComponent />      
+      <ExperienceComponent />
+      <CVSection />
     </main>
-  )
-}
+  );
+};
 
-export default About
+export default About;
