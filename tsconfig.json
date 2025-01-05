@@ -13,9 +13,11 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
     "skipLibCheck": true,
+    "target": "esnext", 
+    "module": "ES2020",
     "moduleResolution": "node",
     "strict": true,
     "jsx":"react-jsx"

@@ -148,7 +148,7 @@ export const Navbar = () => {
   }, [isSheetOpen]);
 
   return (
-    <nav className="w-full fixed top-0 px-12 py-5 bg-black flex flex-row justify-between">
+    <nav className="w-full fixed top-0 px-12 py-5 bg-black flex flex-row justify-between z-30">
       <div className="md:px-10">
         <Link to={'/'}>
           <House className="nav-icon" />
