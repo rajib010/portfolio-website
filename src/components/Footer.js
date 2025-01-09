@@ -37,13 +37,13 @@ const Footer = () => {
             React.createElement("div", { className: 'flex flex-col' },
                 React.createElement("p", { className: 'font-bold mb-2 md:text-xl' }, "Get in touch"),
                 FooterContact &&
-                    FooterContact.map((item) => (React.createElement("p", { className: 'mb-4 text-[16px]', key: item.id },
+                    FooterContact.map((item) => (React.createElement("p", { className: 'mb-4 text-[15px]', key: item.id },
                         React.createElement(item.icon, { className: 'inline mr-4' }),
                         item.value)))),
             React.createElement("div", { className: 'flex flex-col' },
                 React.createElement("p", { className: 'font-bold mb-2 md:text-xl' }, "Social Links"),
                 FooterSocialLinks &&
-                    FooterSocialLinks.map((item) => (React.createElement("p", { className: 'mb-4 text-[16px]', key: item.id },
+                    FooterSocialLinks.map((item) => (React.createElement("p", { className: 'mb-4 text-[15px]', key: item.id },
                         React.createElement(item.icon, { className: 'inline mr-4' }),
                         React.createElement(Link, { to: item.url, target: '_blank' }, item.label))))),
             React.createElement("div", { className: 'flex flex-col' },

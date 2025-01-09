@@ -54,7 +54,7 @@ const Footer = () => {
           <p className='font-bold mb-2 md:text-xl'>Get in touch</p>
           {FooterContact &&
             FooterContact.map((item) => (
-              <p className='mb-4 text-[16px]' key={item.id}>
+              <p className='mb-4 text-[15px]' key={item.id}>
                 <item.icon className='inline mr-4' />
                 {item.value}
               </p>
@@ -66,7 +66,7 @@ const Footer = () => {
           <p className='font-bold mb-2 md:text-xl'>Social Links</p>
           {FooterSocialLinks &&
             FooterSocialLinks.map((item) => (
-              <p className='mb-4 text-[16px]' key={item.id}>
+              <p className='mb-4 text-[15px]' key={item.id}>
                 <item.icon className='inline mr-4' />
                 <Link to={item.url} target='_blank'>
                   {item.label}
