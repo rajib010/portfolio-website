@@ -6,7 +6,7 @@ const EducationalBackgroundComponent = () => {
     return (
         <div className="container mt-5">
             <h1 className="text-left text-2xl font-bold mb-5 ml-16">Educational Background</h1>
-            <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {EducationalBackground && EducationalBackground.map((item) => (
                     <Card key={item.id}
                         className="rounded-lg p-4 text-center cursor-pointer shadow-xl tansistion hover:-translate-y-1">
