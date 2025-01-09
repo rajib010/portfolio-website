@@ -30,8 +30,8 @@ const renderStars = (rating: number) => {
 const OtherSkills = () => {
     return (
         <div className="container my-5">
-            <h1 className="text-center text-3xl font-bold mb-5">Other Skills</h1>
-            <div className="w-[90%] mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <h1 className="text-center text-2xl font-bold mb-5">Other Skills</h1>
+            <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {OtherSkillsInfo.map((item) => (
                     <Card
                         key={item.id}
@@ -40,8 +40,8 @@ const OtherSkills = () => {
                         <div className="center mb-2">
                             <img src={item.pic} alt="item-pic" className="w-12 h-12" />
                         </div>
-                        <h2 className="font-semibold text-xl">{item.title}</h2>
-                        {/* Stars fixed 2vw above the bottom */}
+                        <h2 className="font-bold text-sm md:text-xl">{item.title}</h2>
+                        
                         <div className="m-1">
                             {renderStars(item.rating)}
                         </div>

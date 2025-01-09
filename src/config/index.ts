@@ -241,7 +241,7 @@ export const PHPProjects = [
 export const NEXTProjects = [
     {
         id: 101,
-        label: "AnonymousMessenger",
+        label: "Anonymous Messenger",
         pic: anonymous,
         description: 'Anonymous Messenger is a web message app to send and recieve messages anonymously. Built using NEXT Js and with other libraries like ZOD, Shade CN ,Resend Email, NEXT Auth etc for better user experience.',
         github: 'https://github.com/rajib010/anonymous-messenger'

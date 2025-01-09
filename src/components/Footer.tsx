@@ -51,10 +51,10 @@ const Footer = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {/* left contents */}
         <div className='flex flex-col'>
-          <p className='font-bold mb-2 text-xl'>Get in touch</p>
+          <p className='font-bold mb-2 md:text-xl'>Get in touch</p>
           {FooterContact &&
             FooterContact.map((item) => (
-              <p className='mb-4' key={item.id}>
+              <p className='mb-4 text-[16px]' key={item.id}>
                 <item.icon className='inline mr-4' />
                 {item.value}
               </p>
@@ -63,10 +63,10 @@ const Footer = () => {
 
         {/* central contents */}
         <div className='flex flex-col'>
-          <p className='font-bold mb-2 text-xl'>Social Links</p>
+          <p className='font-bold mb-2 md:text-xl'>Social Links</p>
           {FooterSocialLinks &&
             FooterSocialLinks.map((item) => (
-              <p className='mb-4' key={item.id}>
+              <p className='mb-4 text-[16px]' key={item.id}>
                 <item.icon className='inline mr-4' />
                 <Link to={item.url} target='_blank'>
                   {item.label}
@@ -77,7 +77,7 @@ const Footer = () => {
 
         {/* right contents */}
         <div className='flex flex-col'>
-          <p className='font-bold mb-2 text-xl'>Send a message</p>
+          <p className='font-bold mb-2 md:text-xl'>Send a message</p>
           <form onSubmit={handleSubmit}>
             <Input
               className='text-black'
@@ -87,7 +87,7 @@ const Footer = () => {
             <Button
               type='submit'
               disabled={isSending}
-              className={`max-w-[10vw] my-3 ${isSending ? 'bg-gray-400' : 'bg-green-700 hover:bg-green-900'}`}
+              className={`max-w-[20vw] my-3 ${isSending ? 'bg-gray-400' : 'bg-green-700 hover:bg-green-900'}`}
             >
               {isSending ? 'Sending...' : 'Send'}
             </Button>
