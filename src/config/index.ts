@@ -34,7 +34,7 @@ import ielts from "@/assets/ielts.png"
 
 import nothing from "@/assets/nothing.png"
 
-
+import { CardProps } from "@/components/CommonCard"
 
 import { MapPinHouse, Mail, Phone, Twitter, Github, Linkedin, Youtube } from "lucide-react"
 
@@ -178,7 +178,7 @@ export const FooterSocialLinks = [
 
 export const EducationalBackground = [
     {
-        id: 'school',
+        id: 101,
         label: 'School',
         value: 'Pashupati Academy',
         location: 'Shivasatakshi-08, Jhapa',
@@ -186,7 +186,7 @@ export const EducationalBackground = [
         pic: school
     },
     {
-        id: 'highschool',
+        id: 102,
         label: 'High School',
         value: 'Kathmandu Bernhardt College',
         location: 'Balkhu, Kathmandu',
@@ -194,14 +194,14 @@ export const EducationalBackground = [
         pic: highschool
     },
     {
-        id: 'ielts',
+        id: 103,
         label: 'IELTS',
         value: '7.5 Overall',
         year: '2022',
         pic: ielts
     },
     {
-        id: 'bachelors',
+        id: 104,
         label: 'Bachelors',
         value: 'Divyagyan College',
         location: 'Putalisadak, Kathmandu',
@@ -213,13 +213,13 @@ export const EducationalBackground = [
 
 export const ProfessionalExperience = [
     {
-        id: 'no',
+        id: 1,
         label: 'not any',
         pic: nothing
     }
 ]
 
-export const PHPProjects = [
+export const PHPProjects: CardProps[] = [
     {
         id: 101,
         label: "Finderz",
@@ -233,12 +233,12 @@ export const PHPProjects = [
         label: "Student Management System",
         pic: studentmanagement,
         description: 'Basic Project that enables adding, removing, updating students/courses information with features like reset passwords, send mail to students, keeping payments information',
-        technologies: "HTML, CSS, JS, PHP, Bootstrap, AJAX",
+        technologies: "JS, PHP, Bootstrap, AJAX",
         github: 'https://github.com/rajib010/studentManagement-Php'
     }
 ]
 
-export const NEXTProjects = [
+export const NEXTProjects: CardProps[] = [
     {
         id: 101,
         label: "Anonymous Messenger",
@@ -262,7 +262,7 @@ export const NEXTProjects = [
     },
 ]
 
-export const MERNProjects = [
+export const MERNProjects: CardProps[] = [
     {
         id: 1001,
         label: "Chat Application",
@@ -289,7 +289,7 @@ export const MERNProjects = [
     }
 ]
 
-export const REACTMINIPROJECTS = [
+export const REACTMINIPROJECTS: CardProps[] = [
     {
         id: 101,
         label: "Quiz Application",

@@ -1,6 +1,6 @@
 import React from 'react'
 import { EducationalBackground } from '@/config'
-import { Card } from './ui/card'
+import { Card } from '../ui/card'
 
 const EducationalBackgroundComponent = () => {
     return (

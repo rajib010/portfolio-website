@@ -1,8 +1,8 @@
 import React from "react";
-import Skills from "@/components/TechnicalSkills";
-import OtherSkills from "@/components/OtherSkills";
-import CVSection from "@/components/CV";
-import IntroContent from "@/components/IntroContent";
+import Skills from "@/components/home/TechnicalSkills";
+import OtherSkills from "@/components/home/OtherSkills";
+import CVSection from "@/components/home/CV";
+import IntroContent from "@/components/home/IntroContent";
 
 function Home() {
 

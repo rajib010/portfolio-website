@@ -1,7 +1,7 @@
-import MERNProjectsComponent from '@/components/MERNProjects'
-import NEXTProjectsComponent from '@/components/NEXTProjects'
-import PHPProjectsComponent from '@/components/PHPProjects'
-import ReactMiniProjectsComponent from '@/components/ReactMiniProjects'
+import MERNProjectsComponent from '@/components/projects/MERNProjects'
+import { NEXTProjectsComponent } from '@/components/projects/NEXTProjects'
+import PHPProjectsComponent from '@/components/projects/PHPProjects'
+import ReactMiniProjectsComponent from '@/components/projects/ReactMiniProjects'
 import React from 'react'
 
 const Projects = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProfessionalExperience } from '@/config'
-import { Card } from './ui/card'
+import { Card } from '../ui/card'
 
 const ExperienceComponent = () => {
     return (

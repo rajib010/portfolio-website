@@ -1,8 +1,8 @@
 import React from 'react';
 import userImage from "@/assets/image.jpg"
-import EducationalBackgroundComponent from '@/components/EducationalBackgroud';
-import ExperienceComponent from '@/components/ExperienceCard';
-import CVSection from '@/components/CV';
+import EducationalBackgroundComponent from '@/components/about/EducationalBackgroud';
+import ExperienceComponent from '@/components/about/ExperienceCard';
+import CVSection from '@/components/home/CV';
 
 
 const About = () => {
