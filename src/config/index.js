@@ -1,46 +1,33 @@
-import php from "@/assets/php.png"
-import mysql from "@/assets/mysql.png"
-import java from "@/assets/java.png"
-import js from "@/assets/java-script.png"
-import wordpress from "@/assets/wordpress.png"
-
-import studentmanagement from "@/assets/studentmanagement.png"
-import lostfound from "@/assets/lost-and-found.png"
-import chatapp from "@/assets/chatapplication.png"
-import ecommerce from "@/assets/ecommerce.png"
-import blog from "@/assets/blog.png"
-import otp from "@/assets/otp.png"
-import employeemanagement from "@/assets/employeemanagement.png"
-import stopwatch from "@/assets/stopwatch.png"
-import passwordgenerator from "@/assets/passwordgenerator.png"
-import hangman from "@/assets/hangman.png"
-import quiz from "@/assets/quiz.png"
-import idea from "@/assets/idea.png"
-import anonymous from "@/assets/anonymous.png"
-import musicacademy from "@/assets/musicacademy.png"
-
-
-
-import agility from "@/assets/agility.png"
-import communication from "@/assets/communication.png"
-import time from "@/assets/time.png"
-import criticalThinking from "@/assets/criticalthinking.png"
-import mathematical from "@/assets/mathematical.png"
-
-import bachelors from "@/assets/bachelors.png"
-import school from "@/assets/school.png"
-import highschool from "@/assets/highschool.png"
-import ielts from "@/assets/ielts.png"
-
-import nothing from "@/assets/nothing.png"
-
-import { CardProps } from "@/components/CommonCard"
-import { TechnicalSkillsType } from "@/components/home/TechnicalSkills"
-
-import { MapPinHouse, Mail, Phone, Twitter, Github, Linkedin, Youtube } from "lucide-react"
-
-
-
+import php from "@/assets/php.png";
+import mysql from "@/assets/mysql.png";
+import java from "@/assets/java.png";
+import js from "@/assets/java-script.png";
+import wordpress from "@/assets/wordpress.png";
+import studentmanagement from "@/assets/studentmanagement.png";
+import lostfound from "@/assets/lost-and-found.png";
+import chatapp from "@/assets/chatapplication.png";
+import ecommerce from "@/assets/ecommerce.png";
+import blog from "@/assets/blog.png";
+import otp from "@/assets/otp.png";
+import employeemanagement from "@/assets/employeemanagement.png";
+import stopwatch from "@/assets/stopwatch.png";
+import passwordgenerator from "@/assets/passwordgenerator.png";
+import hangman from "@/assets/hangman.png";
+import quiz from "@/assets/quiz.png";
+import idea from "@/assets/idea.png";
+import anonymous from "@/assets/anonymous.png";
+import musicacademy from "@/assets/musicacademy.png";
+import agility from "@/assets/agility.png";
+import communication from "@/assets/communication.png";
+import time from "@/assets/time.png";
+import criticalThinking from "@/assets/criticalthinking.png";
+import mathematical from "@/assets/mathematical.png";
+import bachelors from "@/assets/bachelors.png";
+import school from "@/assets/school.png";
+import highschool from "@/assets/highschool.png";
+import ielts from "@/assets/ielts.png";
+import nothing from "@/assets/nothing.png";
+import { MapPinHouse, Mail, Phone, Twitter, Github, Linkedin, Youtube } from "lucide-react";
 export const MenuItemsList = [
     {
         id: 'home',
@@ -57,10 +44,8 @@ export const MenuItemsList = [
         label: 'Projects',
         path: '/projects'
     },
-]
-
-
-export const TechnicalSkillsInfo: TechnicalSkillsType[] = [
+];
+export const TechnicalSkillsInfo = [
     {
         id: 1001,
         title: 'Javascript',
@@ -91,9 +76,7 @@ export const TechnicalSkillsInfo: TechnicalSkillsType[] = [
         content: 'Relational Database Management',
         pic: mysql
     },
-
-]
-
+];
 export const OtherSkillsInfo = [
     {
         id: 1,
@@ -125,8 +108,7 @@ export const OtherSkillsInfo = [
         pic: mathematical,
         rating: 4
     },
-]
-
+];
 export const FooterContact = [
     {
         id: 'email',
@@ -143,8 +125,7 @@ export const FooterContact = [
         icon: MapPinHouse,
         value: 'Shivasatakshi-08, Jhapa'
     },
-]
-
+];
 export const FooterSocialLinks = [
     {
         id: 'twitter',
@@ -170,8 +151,7 @@ export const FooterSocialLinks = [
         label: 'Youtube',
         icon: Youtube
     },
-]
-
+];
 export const EducationalBackground = [
     {
         id: 101,
@@ -204,18 +184,15 @@ export const EducationalBackground = [
         year: '2022-Now',
         pic: bachelors
     },
-
-]
-
+];
 export const ProfessionalExperience = [
     {
         id: 1,
         label: 'not any',
         pic: nothing
     }
-]
-
-export const PHPProjects: CardProps[] = [
+];
+export const PHPProjects = [
     {
         id: 101,
         label: "Finderz",
@@ -232,9 +209,8 @@ export const PHPProjects: CardProps[] = [
         technologies: "JS, PHP, Bootstrap, AJAX",
         github: 'https://github.com/rajib010/studentManagement-Php'
     }
-]
-
-export const NEXTProjects: CardProps[] = [
+];
+export const NEXTProjects = [
     {
         id: 101,
         label: "Anonymous Messenger",
@@ -256,9 +232,8 @@ export const NEXTProjects: CardProps[] = [
         description: 'This is a idea sharing platform where the users can share their ideas hoping to meet for the sponsors to fund them. I have incorpoated the use of sanity for backend, Shadcn for frontend components and next auth for user authentication.',
         github: 'https://github.com/rajib010/idea-hub2.0'
     },
-]
-
-export const MERNProjects: CardProps[] = [
+];
+export const MERNProjects = [
     {
         id: 1001,
         label: "Chat Application",
@@ -283,9 +258,8 @@ export const MERNProjects: CardProps[] = [
         technologies: "Zustand, Daisy Ui, Tailwind, React-Router, Toaster, Axios, Cloudinary",
         github: 'https://github.com/rajib010/MERN-BlogApp'
     }
-]
-
-export const REACTMINIPROJECTS: CardProps[] = [
+];
+export const REACTMINIPROJECTS = [
     {
         id: 101,
         label: "Quiz Application",
@@ -328,4 +302,4 @@ export const REACTMINIPROJECTS: CardProps[] = [
         description: 'The app allows users to log in by entering an OTP (One-Time Password), ensuring enhanced security compared to traditional password-based systems. It includes features like OTP input validation, seamless navigation, and real-time error handling, delivering a smooth user experience.',
         github: 'https://github.com/rajib010/OTP-Login'
     },
-]
+];

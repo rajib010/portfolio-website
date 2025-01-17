@@ -2,7 +2,14 @@ import React from "react";
 import { TechnicalSkillsInfo } from "@/config";
 import { Card } from "@/components/ui/card";
 
-const TechnincalSkills = () => {
+export type TechnicalSkillsType = {
+    id: number;
+    title: string;
+    content: string;
+    pic: string
+}
+
+const TechnincalSkills= () => {
     return (
         <div className="container">
             <h1 className="text-center text-2xl font-bold mb-5">Technical Skills</h1>
@@ -15,7 +22,6 @@ const TechnincalSkills = () => {
                         </div>
                         <h2 className="font-bold text-sm md:text-xl"> {item.title}</h2>
                         <p className="my-1 text-sm lg:text-lg">{item.content}</p>
-                        <p className="italic text-sm lg:text-xl">Projects: {item.projects}</p>
                     </Card>
                 ))}
             </div>
