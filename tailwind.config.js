@@ -50,7 +50,10 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+		  boxShadow: {
+			'top': '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -4px 4px 3px rgba(0, 0, 0, 0.1)',
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

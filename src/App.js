@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
 import ScrollToTop from "./lib/utils";
 function App() {
-    return (React.createElement("div", { className: "flex flex-col overflow-hidden bg-white" },
+    return (React.createElement("div", { className: "flex flex-col overflow-hidden bg-white dark:bg-slate-800" },
         React.createElement(Navbar, null),
         React.createElement(ScrollToTop, null),
         React.createElement(Routes, null,

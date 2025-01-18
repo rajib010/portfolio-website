@@ -11,17 +11,17 @@ const renderStars = (rating: number) => {
 
     // Full stars
     for (let i = 0; i < fullStars; i++) {
-        stars.push(<FaStar key={`full-${i}`} className="text-gray-800" />);
+        stars.push(<FaStar key={`full-${i}`} className="text-gray-800 dark:text-orange-500" />);
     }
 
     // Half star
     if (halfStar) {
-        stars.push(<FaStarHalfAlt key="half" className="text-gray-800" />);
+        stars.push(<FaStarHalfAlt key="half" className="text-gray-800 dark:text-orange-500" />);
     }
 
     // Empty stars
     for (let i = stars.length; i < 5; i++) {
-        stars.push(<FaRegStar key={`empty-${i}`} className="text-gray-400" />);
+        stars.push(<FaRegStar key={`empty-${i}`} className="text-gray-400 dark:text-slate-200" />);
     }
 
     return <div className="flex justify-center space-x-1">{stars}</div>;

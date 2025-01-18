@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const IntroContent = () => {
     return (
-        <div className="w-[90%] mx-auto flex flex-col lg:flex-row lg:justify-between items-center py-5 gap-5">
+        <div className="w-[90%] mx-auto flex flex-col lg:flex-row lg:justify-between items-center py-5 gap-5 text-black dark:text-white">
             {/* Image Section */}
             <div className="w-full lg:w-[30%] flex justify-center">
                 <img
@@ -26,8 +26,8 @@ const IntroContent = () => {
                     React, MySQL, Mongo DB, and Java, I specialize in creating
                     efficient, visually appealing, and user-friendly web applications.
                 </p>
-                <Button className="w-full lg:w-auto">
-                    <Link to={'/about'}>See More</Link>
+                <Button className="bg-slate-200 hover:bg-slate-400 shadow-xl dark:bg-slate-900 dark:hover:bg-slate-950">
+                    <Link to={'/about'} className='text-black dark:text-white '>See More</Link>
                 </Button>
             </div>
         </div>

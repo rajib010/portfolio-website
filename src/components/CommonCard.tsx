@@ -58,8 +58,8 @@ const CommonProjectCard: React.FC<{ Information: CardProps[]; Cardtitle: string 
 
             {/* Sheet Component */}
             {showSheet && selectedProject && (
-                <div className="fixed top-12 md:top-6 lg:top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-50">
-                    <div className="bg-white p-8 rounded-lg w-[80%] max-w-4xl">
+                <div className="fixed top-12 md:top-6 lg:top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black  bg-opacity-50">
+                    <div className="bg-white dark:bg-slate-800 p-8 rounded-lg w-[80%] max-w-4xl">
                         <h2 className="text-2xl font-semibold">{selectedProject.label}</h2>
                         <div className="my-4">
                             <img

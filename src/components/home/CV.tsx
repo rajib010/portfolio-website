@@ -2,8 +2,8 @@ import React from "react";
 
 const CVSection = () => {
   return (
-    <section className="cv-section bg-gray-100 py-12 px-6 text-center">
-      <p className=" md:text-lg text-gray-700 mb-6">
+    <section className="cv-section py-12 px-6 text-center">
+      <p className=" md:text-lg text-gray-700 dark:text-slate-300 mb-6">
         Interested in working with me? Download my CV and let's collaborate!
       </p>
       <a

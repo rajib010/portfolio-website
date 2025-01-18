@@ -10,8 +10,8 @@ import ScrollToTop from "./lib/utils"
 
 function App() {
   return (
-    <div className="flex flex-col overflow-hidden bg-white">
-      <Navbar />
+    <div className="flex flex-col overflow-hidden bg-white dark:bg-slate-800">
+      <Navbar/>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

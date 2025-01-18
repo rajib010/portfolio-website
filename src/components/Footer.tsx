@@ -47,7 +47,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className='w-full bg-black text-white py-3 px-20'>
+    <footer className='w-full bg-slate-100 shadow-top dark:bg-black py-3 px-20'>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
         {/* left contents */}
         <div className='flex flex-col'>
@@ -80,22 +80,24 @@ const Footer = () => {
           <p className='font-bold mb-2 md:text-xl'>Send a message</p>
           <form onSubmit={handleSubmit}>
             <Input
-              className='text-black'
+              className='text-black dark:text-white border-black dark:border-white'
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
             <Button
               type='submit'
               disabled={isSending}
-              className={`max-w-[20vw] my-3 ${isSending ? 'bg-gray-400' : 'bg-green-700 hover:bg-green-900'}`}
+              className={`max-w-[20vw] my-3 ${isSending ? 'bg-gray-400' : 'bg-green-700 hover:bg-green-900'}
+                        text-black dark:text-white`}
             >
               {isSending ? 'Sending...' : 'Send'}
             </Button>
           </form>
         </div>
       </div>
-      <Separator />
-      <p className='center italic text-sm mt-2'>All rights reserved.</p>
+      <Separator className='bg-black dark:bg-white'/>
+      <p className='center italic text-sm mt-2'>© 2024 Rajib Pokhrel. Feel free to connect for opportunities. All rights reserved.
+      </p>
     </footer>
   );
 };

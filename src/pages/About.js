@@ -3,7 +3,7 @@ import EducationalBackgroundComponent from '@/components/about/EducationalBackgr
 import ExperienceComponent from '@/components/about/ExperienceCard';
 import CVSection from '@/components/home/CV';
 const About = () => {
-    return (React.createElement("main", { className: "w-full bg-gray-100 p-4 center mt-[5rem] flex flex-col gap-7" },
+    return (React.createElement("main", { className: "w-full p-4 center mt-[7rem] flex flex-col gap-7" },
         React.createElement(EducationalBackgroundComponent, null),
         React.createElement(ExperienceComponent, null),
         React.createElement(CVSection, null)));

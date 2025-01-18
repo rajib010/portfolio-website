@@ -1,5 +1,5 @@
 import React from 'react'
-import { PHPProjects } from '@/config'
+import { PHPProjects } from '@/config/'
 import CommonProjectCard from '../CommonCard'
 
 const PHPProjectsComponent = () => {

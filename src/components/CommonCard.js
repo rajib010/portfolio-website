@@ -22,8 +22,8 @@ const CommonProjectCard = ({ Information, Cardtitle }) => {
                 React.createElement("p", { className: "my-1 text-[14px] md:text-[17px] line-clamp-3" }, item.description),
                 React.createElement("button", { className: "text-sm text-blue-600 underline mt-2 ml-2", onClick: () => openSheet(item) }, "View More Details")));
         })),
-        showSheet && selectedProject && (React.createElement("div", { className: "fixed top-12 md:top-6 lg:top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black bg-opacity-50" },
-            React.createElement("div", { className: "bg-white p-8 rounded-lg w-[80%] max-w-4xl" },
+        showSheet && selectedProject && (React.createElement("div", { className: "fixed top-12 md:top-6 lg:top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black  bg-opacity-50" },
+            React.createElement("div", { className: "bg-white dark:bg-slate-800 p-8 rounded-lg w-[80%] max-w-4xl" },
                 React.createElement("h2", { className: "text-2xl font-semibold" }, selectedProject.label),
                 React.createElement("div", { className: "my-4" },
                     React.createElement("img", { src: selectedProject.pic, alt: "project-pic", className: "w-32 h-32 object-cover mx-auto mb-4" }),

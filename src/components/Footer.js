@@ -32,7 +32,7 @@ const Footer = () => {
             setIsSending(false);
         });
     };
-    return (React.createElement("footer", { className: 'w-full bg-black text-white py-3 px-20' },
+    return (React.createElement("footer", { className: 'w-full bg-slate-100 shadow-top dark:bg-black py-3 px-20' },
         React.createElement("div", { className: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3' },
             React.createElement("div", { className: 'flex flex-col' },
                 React.createElement("p", { className: 'font-bold mb-2 md:text-xl' }, "Get in touch"),
@@ -49,9 +49,10 @@ const Footer = () => {
             React.createElement("div", { className: 'flex flex-col' },
                 React.createElement("p", { className: 'font-bold mb-2 md:text-xl' }, "Send a message"),
                 React.createElement("form", { onSubmit: handleSubmit },
-                    React.createElement(Input, { className: 'text-black', value: message, onChange: (e) => setMessage(e.target.value) }),
-                    React.createElement(Button, { type: 'submit', disabled: isSending, className: `max-w-[20vw] my-3 ${isSending ? 'bg-gray-400' : 'bg-green-700 hover:bg-green-900'}` }, isSending ? 'Sending...' : 'Send')))),
-        React.createElement(Separator, null),
-        React.createElement("p", { className: 'center italic text-sm mt-2' }, "All rights reserved.")));
+                    React.createElement(Input, { className: 'text-black dark:text-white border-black dark:border-white', value: message, onChange: (e) => setMessage(e.target.value) }),
+                    React.createElement(Button, { type: 'submit', disabled: isSending, className: `max-w-[20vw] my-3 ${isSending ? 'bg-gray-400' : 'bg-green-700 hover:bg-green-900'}
+                        text-black dark:text-white` }, isSending ? 'Sending...' : 'Send')))),
+        React.createElement(Separator, { className: 'bg-black dark:bg-white' }),
+        React.createElement("p", { className: 'center italic text-sm mt-2' }, "\u00A9 2024 Rajib Pokhrel. Feel free to connect for opportunities. All rights reserved.")));
 };
 export default Footer;

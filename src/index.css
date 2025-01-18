@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ... */
+/*  */
 
 @layer base {
   :root {
@@ -122,6 +122,29 @@
   }
 
   .nav-icon{
-    @apply text-white w-10 h-10 cursor-pointer
+    @apply dark:text-white text-slate-950 w-10 h-10 cursor-pointer
+  }
+
+  .dropdown-icon{
+    @apply dark:text-white text-slate-950 w-8 h-8 cursor-pointer
+  }
+  .navbar{
+    @apply w-full fixed top-0 px-12 py-5 text-slate-950 dark:text-white bg-slate-100 dark:bg-black flex flex-row justify-between z-30 shadow-xl
+  }
+
+  .nav-menu-ul{
+    @apply w-full mt-7 max-w-[550px] flex justify-between flex-col mb-3 md:mt-0 md:max-w-[400px] md:flex-row md:items-center
+  }
+
+  .nav-menu-li{
+   @apply cursor-pointer w-60 font-semibold text-xl border border-black dark:border-white m-5 rounded-md center p-2  md:w-20 md:border-none md:m-0
+  }
+
+  .language-badge{
+    @apply px-4 py-2 text-center dark:bg-slate-700 dark:text-white bg-slate-300 text-slate-950 rounded cursor-pointer
+  }
+
+  .intro-btn{
+    @apply w-full lg:w-auto bg-slate-400 hover:bg-slate-300
   }
 }

@@ -8,7 +8,7 @@ function Home() {
 
   
   return (
-    <main className="w-full bg-gray-100 p-4 center mt-[5rem] flex flex-col gap-7">
+    <main className="w-full p-4 center mt-[7rem] flex flex-col gap-7">
       <IntroContent />
       <Skills />
       <OtherSkills />

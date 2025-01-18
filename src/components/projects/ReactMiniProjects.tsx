@@ -1,6 +1,6 @@
 import React from 'react'
 import CommonProjectCard from '../CommonCard'
-import { REACTMINIPROJECTS } from '@/config'
+import { REACTMINIPROJECTS } from '@/config/'
 
 const ReactMiniProjectsComponent = () => {
   return (

@@ -4,7 +4,7 @@ import PHPProjectsComponent from '@/components/projects/PHPProjects';
 import ReactMiniProjectsComponent from '@/components/projects/ReactMiniProjects';
 import React from 'react';
 const Projects = () => {
-    return (React.createElement("main", { className: "w-full bg-gray-100 p-4 center mt-[5rem] flex flex-col gap-7 text-[16px]" },
+    return (React.createElement("main", { className: "w-full p-4 center my-[7rem] flex flex-col gap-7" },
         React.createElement(MERNProjectsComponent, null),
         React.createElement(ReactMiniProjectsComponent, null),
         React.createElement(NEXTProjectsComponent, null),

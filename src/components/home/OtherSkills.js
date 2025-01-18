@@ -8,15 +8,15 @@ const renderStars = (rating) => {
     const stars = [];
     // Full stars
     for (let i = 0; i < fullStars; i++) {
-        stars.push(React.createElement(FaStar, { key: `full-${i}`, className: "text-gray-800" }));
+        stars.push(React.createElement(FaStar, { key: `full-${i}`, className: "text-gray-800 dark:text-orange-500" }));
     }
     // Half star
     if (halfStar) {
-        stars.push(React.createElement(FaStarHalfAlt, { key: "half", className: "text-gray-800" }));
+        stars.push(React.createElement(FaStarHalfAlt, { key: "half", className: "text-gray-800 dark:text-orange-500" }));
     }
     // Empty stars
     for (let i = stars.length; i < 5; i++) {
-        stars.push(React.createElement(FaRegStar, { key: `empty-${i}`, className: "text-gray-400" }));
+        stars.push(React.createElement(FaRegStar, { key: `empty-${i}`, className: "text-gray-400 dark:text-slate-200" }));
     }
     return React.createElement("div", { className: "flex justify-center space-x-1" }, stars);
 };
