@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Check, Cog, House, Menu, Moon, Sun } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MenuItemsList } from '@/config';
@@ -13,6 +14,7 @@ import { Badge } from './ui/badge';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Switch } from './ui/switch';
 import { Label } from './ui/label';
+
 
 interface ThemeToggleProps {
   isDarkMode: boolean;
@@ -57,13 +59,13 @@ const ThemeToggleButton: React.FC<ThemeToggleProps> = ({ isDarkMode, toggleTheme
   return (
     <div className="center w-full p-1">
       <Switch
-        className={`${isDarkMode?'bg-blue-500':'bg-slate-950'}`}
+        className={`${isDarkMode ? 'bg-blue-500' : 'bg-slate-950'}`}
         id="dark-mode"
         checked={isDarkMode}
         onCheckedChange={toggleTheme}
       />
       <Label htmlFor="dark-mode" className="ml-2">
-        {isDarkMode ? <Moon className='dropdown-icon'/> : <Sun className='dropdown-icon'/>}
+        {isDarkMode ? <Moon className='dropdown-icon' /> : <Sun className='dropdown-icon' />}
       </Label>
     </div>
   );
@@ -99,7 +101,7 @@ const HeaderRightContent: React.FC<HeaderRightContentProps> = ({
               className="language-badge"
               onClick={changeLanguage}
             >
-              {selectedLanguage} <Check className="ml-2 w-4 h-4 font-bold text-green-400" />
+              {selectedLanguage==='en'?'English':'Nepali'} <Check className="ml-2 w-4 h-4 font-bold text-green-400" />
             </Badge>
           </DropdownMenuLabel>
         </DropdownMenuContent>
@@ -113,7 +115,7 @@ export const Navbar: React.FC = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const initialTheme = localStorage.getItem('theme') === 'dark';
-  const initialLanguage = localStorage.getItem('language') || 'English';
+  const initialLanguage = localStorage.getItem('language') || 'en';
 
   const [isDarkMode, setIsDarkMode] = useState(initialTheme);
   const [selectedLanguage, setSelectedLanguage] = useState(initialLanguage);
@@ -147,14 +149,21 @@ export const Navbar: React.FC = () => {
     });
   };
 
+  const { i18n } = useTranslation();
 
   const changeLanguage = () => {
-    const newLanguage = selectedLanguage === 'English' ? 'Nepali' : 'English';
+    const newLanguage = selectedLanguage === 'en' ? 'np' : 'en';
+    i18n.changeLanguage(newLanguage);
     setSelectedLanguage(newLanguage);
     localStorage.setItem('language', newLanguage);
   };
 
-  //hide sheet on md or larger
+  useEffect(() => {
+    if (selectedLanguage) {
+      i18n.changeLanguage(selectedLanguage);
+    }
+  }, [selectedLanguage, i18n]);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);

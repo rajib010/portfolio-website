@@ -1,9 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
 import userImage from "@/assets/image.jpg";
 import { Link } from 'react-router-dom';
 
 const IntroContent = () => {
+
+    const { t, i18n } = useTranslation();
+    const newlanguage = i18n.language
     return (
         <div className="w-[90%] mx-auto flex flex-col lg:flex-row lg:justify-between items-center py-5 gap-5 text-black dark:text-white">
             {/* Image Section */}

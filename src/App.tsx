@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar"
 import Projects from "./pages/Projects"
 import Footer from "./components/Footer"
 import ScrollToTop from "./lib/utils"
+import "./utils/i18n"
 
 
 function App() {
