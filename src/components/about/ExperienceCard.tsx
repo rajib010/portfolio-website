@@ -1,11 +1,14 @@
 import React from 'react'
-import { ProfessionalExperience } from '@/config'
+import { ProfessionalExperienceComponent } from '@/config'
 import { Card } from '../ui/card'
+import { useTranslation } from 'react-i18next'
 
 const ExperienceComponent = () => {
+    const ProfessionalExperience = ProfessionalExperienceComponent();
+    const {t}= useTranslation()
     return (
         <div className="container mt-5">
-            <h1 className="text-left text-2xl font-bold mb-5 ml-16">Professional Experience</h1>
+            <h1 className="text-left text-2xl font-bold mb-5 ml-16">{t('professionalExperience')}</h1>
             <div className="w-[90%] mx-auto grid grid-cols-3 md:grid-cols-4 gap-4">
                 {ProfessionalExperience && ProfessionalExperience.map((item) => (
                     <Card key={item.id}

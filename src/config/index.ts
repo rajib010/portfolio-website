@@ -19,8 +19,6 @@ import idea from "@/assets/idea.png"
 import anonymous from "@/assets/anonymous.png"
 import musicacademy from "@/assets/musicacademy.png"
 
-
-
 import agility from "@/assets/agility.png"
 import communication from "@/assets/communication.png"
 import time from "@/assets/time.png"
@@ -31,7 +29,6 @@ import bachelors from "@/assets/bachelors.png"
 import school from "@/assets/school.png"
 import highschool from "@/assets/highschool.png"
 import ielts from "@/assets/ielts.png"
-
 import nothing from "@/assets/nothing.png"
 
 import { CardProps } from "@/components/CommonCard"
@@ -39,25 +36,31 @@ import { TechnicalSkillsType } from "@/components/home/TechnicalSkills"
 
 import { MapPinHouse, Mail, Phone, Twitter, Github, Linkedin, Youtube } from "lucide-react"
 
+import { useTranslation } from 'react-i18next';
 
+export const MenuItemsList = () => {
+    const { t } = useTranslation();
 
-export const MenuItemsList = [
-    {
-        id: 'home',
-        label: 'Home',
-        path: '/'
-    },
-    {
-        id: 'about',
-        label: 'About',
-        path: '/about'
-    },
-    {
-        id: 'projects',
-        label: 'Projects',
-        path: '/projects'
-    },
-]
+    const items = [
+        {
+            id: 'home',
+            label: t('home'),
+            path: '/'
+        },
+        {
+            id: 'about',
+            label: t('about'),
+            path: '/about'
+        },
+        {
+            id: 'projects',
+            label: t('projects'),
+            path: '/projects'
+        },
+    ];
+
+    return items;
+};
 
 
 export const TechnicalSkillsInfo: TechnicalSkillsType[] = [
@@ -94,56 +97,66 @@ export const TechnicalSkillsInfo: TechnicalSkillsType[] = [
 
 ]
 
-export const OtherSkillsInfo = [
-    {
-        id: 1,
-        title: 'Quick Learner',
-        pic: agility,
-        rating: 4.5
-    },
-    {
-        id: 2,
-        title: 'Communication',
-        pic: communication,
-        rating: 5
-    },
-    {
-        id: 3,
-        title: 'Time Management',
-        pic: time,
-        rating: 4
-    },
-    {
-        id: 4,
-        title: 'Critical Thinking',
-        pic: criticalThinking,
-        rating: 4.5
-    },
-    {
-        id: 5,
-        title: 'Analytical Skills',
-        pic: mathematical,
-        rating: 4
-    },
-]
+export const OtherSkillsInfo = () => {
 
-export const FooterContact = [
-    {
-        id: 'email',
-        value: 'pokhrelrajib016@gmail.com',
-        icon: Mail
-    },
-    {
-        id: 'phone',
-        icon: Phone,
-        value: '9844075750'
-    },
-    {
-        id: 'address',
-        icon: MapPinHouse,
-        value: 'Shivasatakshi-08, Jhapa'
-    },
-]
+    const { t } = useTranslation();
+
+    const items = [
+        {
+            id: 1,
+            title: t('quick learner'),
+            pic: agility,
+            rating: 4.5
+        },
+        {
+            id: 2,
+            title: t('communication'),
+            pic: communication,
+            rating: 5
+        },
+        {
+            id: 3,
+            title: t('time management'),
+            pic: time,
+            rating: 4
+        },
+        {
+            id: 4,
+            title: t('critical thinking'),
+            pic: criticalThinking,
+            rating: 4.5
+        },
+        {
+            id: 5,
+            title: t('analytical skills'),
+            pic: mathematical,
+            rating: 4
+        },
+    ]
+    return items;
+}
+
+export const FooterContactComponent = () => {
+    const { t } = useTranslation()
+    const items = [
+        {
+            id: 'email',
+            value: 'pokhrelrajib016@gmail.com',
+            icon: Mail
+        },
+        {
+            id: 'phone',
+            icon: Phone,
+            value: '9844075750'
+        },
+        {
+            id: 'address',
+            icon: MapPinHouse,
+            value: t('address')
+        },
+    ]
+    return items
+}
 
 export const FooterSocialLinks = [
     {
@@ -172,48 +185,57 @@ export const FooterSocialLinks = [
     },
 ]
 
-export const EducationalBackground = [
-    {
-        id: 101,
-        label: 'School',
-        value: 'Pashupati Academy',
-        location: 'Shivasatakshi-08, Jhapa',
-        year: '2006-2018',
-        pic: school
-    },
-    {
-        id: 102,
-        label: 'High School',
-        value: 'Kathmandu Bernhardt College',
-        location: 'Balkhu, Kathmandu',
-        year: '2018-2020',
-        pic: highschool
-    },
-    {
-        id: 103,
-        label: 'IELTS',
-        value: '7.5 Overall',
-        year: '2022',
-        pic: ielts
-    },
-    {
-        id: 104,
-        label: 'Bachelors',
-        value: 'Divyagyan College',
-        location: 'Putalisadak, Kathmandu',
-        year: '2022-Now',
-        pic: bachelors
-    },
+export const EducationalBackgroundComponentInfo = () => {
+    const { t } = useTranslation()
 
-]
+    const items = [
+        {
+            id: 101,
+            label: t('school'),
+            value: t('pashupatiAcademy'),
+            location: t('address'),
+            year: '2006-2018',
+            pic: school
+        },
+        {
+            id: 102,
+            label: t('highSchool'),
+            value: t('kathmanduBernhardtCollege'),
+            location: t('balkhuKathmandu'),
+            year: '2018-2020',
+            pic: highschool
+        },
+        {
+            id: 103,
+            label: 'IELTS',
+            value: '7.5 Overall',
+            year: '2022',
+            pic: ielts
+        },
+        {
+            id: 104,
+            label: t('bachelors'),
+            value: t('divyagyanCollege'),
+            location: t('putalisadakKathmandu'),
+            year: `2022 - ${t('now')}`,
+            pic: bachelors
+        },
 
-export const ProfessionalExperience = [
-    {
-        id: 1,
-        label: 'not any',
-        pic: nothing
-    }
-]
+    ]
+    return items;
+}
+
+export const ProfessionalExperienceComponent = () => {
+    const { t } = useTranslation()
+    const items = [
+        {
+            id: 1,
+            label: t('nothing'),
+            pic: nothing
+        }
+    ]
+    return items;
+}
 
 export const PHPProjects: CardProps[] = [
     {

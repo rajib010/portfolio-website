@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useTransition } from "react";
 import { TechnicalSkillsInfo } from "@/config";
 import { Card } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 export type TechnicalSkillsType = {
     id: number;
@@ -9,10 +10,11 @@ export type TechnicalSkillsType = {
     pic: string
 }
 
-const TechnincalSkills= () => {
+const TechnincalSkills = () => {
+    const { t } = useTranslation();
     return (
         <div className="container">
-            <h1 className="text-center text-2xl font-bold mb-5">Technical Skills</h1>
+            <h1 className="text-center text-2xl font-bold mb-5">{t('technical skills')}</h1>
             <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {TechnicalSkillsInfo.map((item) => (
                     <Card key={item.id}

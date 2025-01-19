@@ -137,7 +137,7 @@
   }
 
   .nav-menu-li{
-   @apply cursor-pointer w-60 font-semibold text-xl border border-black dark:border-white m-5 rounded-md center p-2  md:w-20 md:border-none md:m-0
+   @apply cursor-pointer w-60 font-semibold text-xl border border-black dark:border-white m-5 rounded-md center p-2  md:w-40 md:border-none md:m-0
   }
 
   .language-badge{

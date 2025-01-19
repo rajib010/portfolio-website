@@ -1,8 +1,9 @@
 import React from 'react'
-import { EducationalBackground } from '@/config'
+import { EducationalBackgroundComponentInfo } from '@/config'
 import { Card } from '../ui/card'
 
 const EducationalBackgroundComponent = () => {
+    const EducationalBackground = EducationalBackgroundComponentInfo()
     return (
         <div className="container mt-5">
             <h1 className="text-left text-2xl font-bold mb-5 ml-16">Educational Background</h1>

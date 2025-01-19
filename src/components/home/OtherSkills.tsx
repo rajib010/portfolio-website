@@ -3,6 +3,7 @@ import React from "react";
 import { OtherSkillsInfo } from "@/config";
 import { Card } from "@/components/ui/card";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
@@ -28,11 +29,13 @@ const renderStars = (rating: number) => {
 };
 
 const OtherSkills = () => {
+    const {t} = useTranslation()
+    const otherSkills = OtherSkillsInfo()
     return (
         <div className="container my-5">
-            <h1 className="text-center text-2xl font-bold mb-5">Other Skills</h1>
+            <h1 className="text-center text-2xl font-bold mb-5">{t('other skills')}</h1>
             <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {OtherSkillsInfo.map((item) => (
+                {otherSkills.map((item) => (
                     <Card
                         key={item.id}
                         className="relative rounded-lg p-4 text-center cursor-pointer shadow-xl transition hover:-translate-y-1"

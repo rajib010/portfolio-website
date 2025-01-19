@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 
 const IntroContent = () => {
 
-    const { t, i18n } = useTranslation();
-    const newlanguage = i18n.language
+    const { t } = useTranslation();
     return (
         <div className="w-[90%] mx-auto flex flex-col lg:flex-row lg:justify-between items-center py-5 gap-5 text-black dark:text-white">
             {/* Image Section */}
@@ -21,17 +20,13 @@ const IntroContent = () => {
 
             {/* Content Section */}
             <div className="w-full lg:w-[60%] text-center lg:text-left flex flex-col gap-4">
-                <h3 className="text-2xl font-bold md:text-4xl">Welcome People !!</h3>
-                <h3 className="text-xl sm:text-3xl">I’m Rajib Pokhrel 👋</h3>
+                <h3 className="text-2xl font-bold md:text-4xl">{t('welcome')}</h3>
+                <h3 className="text-xl sm:text-3xl">{t('introduction')}</h3>
                 <p className=" md:text-base lg:text-lg">
-                    A passionate web developer and software enthusiast, currently
-                    pursuing a Bachelor of Computer Application (BCA). With a strong
-                    foundation in technologies like PHP, JavaScript, Express, Node,
-                    React, MySQL, Mongo DB, and Java, I specialize in creating
-                    efficient, visually appealing, and user-friendly web applications.
+                    {t('bio')}
                 </p>
                 <Button className="bg-slate-200 hover:bg-slate-400 shadow-xl dark:bg-slate-900 dark:hover:bg-slate-950">
-                    <Link to={'/about'} className='text-black dark:text-white '>See More</Link>
+                    <Link to={'/about'} className='text-black dark:text-white '>{t('seeMore')}</Link>
                 </Button>
             </div>
         </div>

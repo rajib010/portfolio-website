@@ -39,10 +39,10 @@ const MenuItems: React.FC<MenuItemsProps> = ({ setIsSheetOpen }) => {
     setIsSheetOpen(false);
     navigate(path);
   };
-
+const menuItems = MenuItemsList();
   return (
     <ul className="nav-menu-ul">
-      {MenuItemsList?.map((menuItem) => (
+      {menuItems?.map((menuItem) => (
         <li
           key={menuItem.id}
           className="nav-menu-li"
