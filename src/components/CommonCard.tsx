@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Sheet, SheetContent, SheetDescription,SheetHeader, SheetTitle, SheetFooter } from "./ui/sheet";
 
 export type CardProps = {
     id: number;
@@ -15,7 +16,7 @@ const CommonProjectCard: React.FC<{ Information: CardProps[]; Cardtitle: string 
     const [showSheet, setShowSheet] = useState<boolean>(false);
     const [selectedProject, setSelectedProject] = useState<any>(null);
 
-    const openSheet = (project: any) => {
+    const openSheet = (project: CardProps) => {
         setSelectedProject(project);
         setShowSheet(true);
     };
@@ -58,23 +59,27 @@ const CommonProjectCard: React.FC<{ Information: CardProps[]; Cardtitle: string 
 
             {/* Sheet Component */}
             {showSheet && selectedProject && (
-                <div className="fixed top-12 md:top-6 lg:top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-black  bg-opacity-50">
-                    <div className="bg-white dark:bg-slate-800 p-8 rounded-lg w-[80%] max-w-4xl">
-                        <h2 className="text-2xl font-semibold">{selectedProject.label}</h2>
-                        <div className="my-4">
-                            <img
-                                src={selectedProject.pic}
-                                alt="project-pic"
-                                className="w-32 h-32 object-cover mx-auto mb-4"
-                            />
-                            <p>{selectedProject.description}</p>
-                            {
-                                selectedProject.technologies && <p className="my-1 text-[16px] md:text-[16px] line-clamp-3">
-                                    <span className="font-semibold ">Technologies:</span> {selectedProject.technologies}
-                                </p>
-                            }
-                        </div>
-                        <div className="flex justify-between">
+                <Sheet open={showSheet} onOpenChange={closeSheet}>
+                    <SheetContent>
+                        <SheetHeader>
+                            <SheetTitle>{selectedProject.label}</SheetTitle>
+                            <SheetDescription>
+                                <div className="my-4">
+                                    <img
+                                        src={selectedProject.pic}
+                                        alt="project-pic"
+                                        className="w-32 h-32 object-cover mx-auto mb-4"
+                                    />
+                                    <p className="my-1 text-[16px] md:text-[16px] mb-4">{selectedProject.description}</p>
+                                    {selectedProject.technologies && (
+                                        <p className="my-1 text-[16px]">
+                                            <span className="font-semibold">Technologies:</span> {selectedProject.technologies}
+                                        </p>
+                                    )}
+                                </div>
+                            </SheetDescription>
+                        </SheetHeader>
+                        <SheetFooter>
                             <Link
                                 to={selectedProject.github}
                                 className="text-blue-800 underline"
@@ -82,18 +87,46 @@ const CommonProjectCard: React.FC<{ Information: CardProps[]; Cardtitle: string 
                             >
                                 View on GitHub
                             </Link>
-                            <button
-                                className="text-red-500"
-                                onClick={closeSheet}
-                            >
-                                Close
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                        </SheetFooter>
+                    </SheetContent>
+                </Sheet>
             )}
         </div>
     );
 };
 
 export default CommonProjectCard;
+
+
+
+{/* <div className="bg-white dark:bg-slate-800 p-8 rounded-lg w-[80%] max-w-4xl">
+<h2 className="text-2xl font-semibold">{selectedProject.label}</h2>
+<div className="my-4">
+    <img
+        src={selectedProject.pic}
+        alt="project-pic"
+        className="w-32 h-32 object-cover mx-auto mb-4"
+    />
+    <p>{selectedProject.description}</p>
+    {
+        selectedProject.technologies && <p className="my-1 text-[16px] md:text-[16px] line-clamp-3">
+            <span className="font-semibold ">Technologies:</span> {selectedProject.technologies}
+        </p>
+    }
+</div>
+<div className="flex justify-between">
+    <Link
+        to={selectedProject.github}
+        className="text-blue-800 underline"
+        target="_blank"
+    >
+        View on GitHub
+    </Link>
+    <button
+        className="text-red-500"
+        onClick={closeSheet}
+    >
+        Close
+    </button>
+</div>
+</div> */}
