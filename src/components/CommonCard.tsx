@@ -99,34 +99,3 @@ export default CommonProjectCard;
 
 
 
-{/* <div className="bg-white dark:bg-slate-800 p-8 rounded-lg w-[80%] max-w-4xl">
-<h2 className="text-2xl font-semibold">{selectedProject.label}</h2>
-<div className="my-4">
-    <img
-        src={selectedProject.pic}
-        alt="project-pic"
-        className="w-32 h-32 object-cover mx-auto mb-4"
-    />
-    <p>{selectedProject.description}</p>
-    {
-        selectedProject.technologies && <p className="my-1 text-[16px] md:text-[16px] line-clamp-3">
-            <span className="font-semibold ">Technologies:</span> {selectedProject.technologies}
-        </p>
-    }
-</div>
-<div className="flex justify-between">
-    <Link
-        to={selectedProject.github}
-        className="text-blue-800 underline"
-        target="_blank"
-    >
-        View on GitHub
-    </Link>
-    <button
-        className="text-red-500"
-        onClick={closeSheet}
-    >
-        Close
-    </button>
-</div>
-</div> */}

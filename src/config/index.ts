@@ -10,6 +10,8 @@ import nest from "@/assets/nest.png"
 import express from "@/assets/express.png"
 import seo from "@/assets/seo.png"
 import react from "@/assets/react.png"
+import ieltsCertificate from "@/assets/ielts.jpg"
+import jscertificate from "@/assets/jscertificate.png"
 
 import studentmanagement from "@/assets/studentmanagement.png"
 import lostfound from "@/assets/lost-and-found.png"
@@ -39,12 +41,11 @@ import ielts from "@/assets/ielts.png"
 import nothing from "@/assets/nothing.png"
 
 import { CardProps } from "@/components/CommonCard"
-import { TechnicalSkillsType } from "@/components/home/TechnicalSkills"
+import { CertificateCardProps } from "@/components/certificates/CertificateCard"
 
 import { MapPinHouse, Mail, Phone, Twitter, Github, Linkedin, Youtube } from "lucide-react"
 
 import { useTranslation } from 'react-i18next';
-import { Content } from "@radix-ui/react-dropdown-menu"
 
 export const MenuItemsList = () => {
     const { t } = useTranslation();
@@ -64,6 +65,11 @@ export const MenuItemsList = () => {
             id: 'projects',
             label: t('projects'),
             path: '/projects'
+        },
+        {
+            id: 'certificates',
+            label: t('certificates'),
+            path: '/certificates'
         },
     ];
 
@@ -398,5 +404,21 @@ export const REACTMINIPROJECTS: CardProps[] = [
         pic: otp,
         description: 'The app allows users to log in by entering an OTP (One-Time Password), ensuring enhanced security compared to traditional password-based systems. It includes features like OTP input validation, seamless navigation, and real-time error handling, delivering a smooth user experience.',
         github: 'https://github.com/rajib010/OTP-Login'
+    },
+]
+
+export const CERTIFICATESINFO: CertificateCardProps[] = [
+    {
+        id: 1001,
+        label: 'IELTS Certificate',
+        year: 'May 28, 2022',
+        pic: ieltsCertificate
+
+    },
+    {
+        id: 1002,
+        label: 'JavaScript Certificate',
+        year: 'Aug 20, 2023',
+        pic: jscertificate
     },
 ]

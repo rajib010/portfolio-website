@@ -7,19 +7,21 @@ import Projects from "./pages/Projects"
 import Footer from "./components/Footer"
 import ScrollToTop from "./lib/utils"
 import "./utils/i18n"
+import Certificates from "./pages/Certificates"
 
 
 function App() {
   return (
     <div className="flex flex-col overflow-hidden bg-white dark:bg-slate-800">
-      <Navbar/>
+      <Navbar />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/certificates" element={<Certificates />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
