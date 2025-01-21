@@ -3,6 +3,13 @@ import mysql from "@/assets/mysql.png"
 import java from "@/assets/java.png"
 import js from "@/assets/java-script.png"
 import wordpress from "@/assets/wordpress.png"
+import excel from "@/assets/excel.png"
+import mongo from "@/assets/mongo.png"
+import next from "@/assets/next.png"
+import nest from "@/assets/nest.png"
+import express from "@/assets/express.png"
+import seo from "@/assets/seo.png"
+import react from "@/assets/react.png"
 
 import studentmanagement from "@/assets/studentmanagement.png"
 import lostfound from "@/assets/lost-and-found.png"
@@ -37,6 +44,7 @@ import { TechnicalSkillsType } from "@/components/home/TechnicalSkills"
 import { MapPinHouse, Mail, Phone, Twitter, Github, Linkedin, Youtube } from "lucide-react"
 
 import { useTranslation } from 'react-i18next';
+import { Content } from "@radix-ui/react-dropdown-menu"
 
 export const MenuItemsList = () => {
     const { t } = useTranslation();
@@ -62,40 +70,81 @@ export const MenuItemsList = () => {
     return items;
 };
 
-
-export const TechnicalSkillsInfo: TechnicalSkillsType[] = [
+export const TechnicalSkillsInfo = [
     {
         id: 1001,
         title: 'Javascript',
-        content: 'MERN Stack, NEXTjs',
+        content: 'Build interactive websites',
         pic: js
     },
     {
         id: 1002,
-        title: 'Java',
-        content: 'Core Java',
-        pic: java
+        title: 'React',
+        content: 'Create dynamic UIs',
+        pic: react
     },
     {
         id: 1003,
-        title: 'PHP',
-        content: 'Web Development',
-        pic: php
+        title: 'Express Js',
+        content: 'Develop RESTful APIs',
+        pic: express
     },
     {
         id: 1004,
-        title: 'Wordpress',
-        content: 'Content Management',
-        pic: wordpress
+        title: 'NEXT JS',
+        content: 'Optimize web performance',
+        pic: next
     },
     {
         id: 1005,
+        title: 'NEST JS',
+        content: 'Design scalable backends',
+        pic: nest
+    },
+    {
+        id: 1006,
         title: 'SQL',
-        content: 'Relational Database Management',
+        content: 'Manage relational databases',
         pic: mysql
     },
+    {
+        id: 1007,
+        title: 'MongoDB',
+        content: 'Handle NoSQL databases',
+        pic: mongo
+    },
+    {
+        id: 1008,
+        title: 'Java',
+        content: 'Develop robust applications',
+        pic: java
+    },
+    {
+        id: 1009,
+        title: 'PHP',
+        content: 'Create server-side logic',
+        pic: php
+    },
+    {
+        id: 1010,
+        title: 'Wordpress',
+        content: 'Build CMS websites',
+        pic: wordpress
+    },
+    {
+        id: 1011,
+        title: 'Excel',
+        content: 'Analyze data efficiently',
+        pic: excel
+    },
+    {
+        id: 1012,
+        title: 'SEO',
+        content: 'Improve search rankings',
+        pic: seo
+    },
+];
 
-]
 
 export const OtherSkillsInfo = () => {
 

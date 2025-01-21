@@ -34,5 +34,7 @@
   "bachelors":"Bachelors",
   "divyagyanCollege":"DivyaGyan College",
   "putalisadakKathmandu":"Putalisadak Kathmandu",
-  "mini":"mini"
+  "mini":"mini",
+  "messagesent":"Thank You For Contacting.",
+  "messagefailed":"Failed to send the message."
 }

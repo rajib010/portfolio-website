@@ -34,5 +34,7 @@
   "bachelors": "स्नातक",
   "divyagyanCollege": "दिव्यज्ञान कलेज",
   "putalisadakKathmandu": "पुतलिसडक काठमाण्डौ",
-  "mini":"मिनी"
+  "mini":"मिनी",
+  "messagesent":"तपाईंले सम्पर्क गर्नुभएकोमा धन्यवाद।",
+  "messagefailed":"सन्देश पठाउन असफल भयो।"
 }
