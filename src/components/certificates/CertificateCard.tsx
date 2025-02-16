@@ -80,8 +80,7 @@ const CertificateCard: React.FC<{ CertificateInfo: CertificateCardProps[] }> = (
                         </div>
                         <div className="flex justify-end">
                             <button
-                                className="text-red-500 px-4 py-2 bg-gray-100 
-                                dark:bg-slate-700 hover:bg-gray-200 rounded"
+                                className="text-red-800 font-semibold dark:bg-slate-100 px-2 py-2 rounded "
                                 onClick={closeSheet}
                             >
                                 Close

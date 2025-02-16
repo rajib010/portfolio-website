@@ -10,8 +10,13 @@ import nest from "@/assets/nest.png"
 import express from "@/assets/express.png"
 import seo from "@/assets/seo.png"
 import react from "@/assets/react.png"
+
 import ieltsCertificate from "@/assets/ielts.jpg"
 import jscertificate from "@/assets/jscertificate.png"
+import sqlAdvanced from "@/assets/sql-advanced.png"
+import sqlBasic from "@/assets/sql-basic.png"
+import javaBasic from "@/assets/java-basic.png"
+import jsBasic from "@/assets/js-basic.png"
 
 import studentmanagement from "@/assets/studentmanagement.png"
 import lostfound from "@/assets/lost-and-found.png"
@@ -411,14 +416,39 @@ export const CERTIFICATESINFO: CertificateCardProps[] = [
     {
         id: 1001,
         label: 'IELTS Certificate',
-        year: 'May 28, 2022',
+        year: '28 May, 2022',
         pic: ieltsCertificate
 
     },
     {
         id: 1002,
         label: 'JavaScript Certificate',
-        year: 'Aug 20, 2023',
+        year: '20 Aug, 2023',
         pic: jscertificate
     },
+    {
+        id:1003,
+        label: 'Java Basic',
+        year:'25 Aug, 2024',
+        pic: javaBasic
+    },
+    {
+        id:1004,
+        label: 'JavaScript Basic',
+        year:'25 Aug, 2024',
+        pic: jsBasic
+
+    },
+    {
+        id:1005,
+        label: 'SQL Basic',
+        year:'16 Feb, 2025',
+        pic: sqlBasic
+    },
+    {
+        id:1006,
+        label: 'SQL Advanced',
+        year:'16 Feb, 2025',
+        pic: sqlAdvanced
+    }
 ]
