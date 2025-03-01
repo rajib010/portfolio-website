@@ -17,6 +17,7 @@ import sqlAdvanced from "@/assets/sql-advanced.png"
 import sqlBasic from "@/assets/sql-basic.png"
 import javaBasic from "@/assets/java-basic.png"
 import jsBasic from "@/assets/js-basic.png"
+import jsIntermediate from "@/assets/js-intermediate.jpg"
 
 import studentmanagement from "@/assets/studentmanagement.png"
 import lostfound from "@/assets/lost-and-found.png"
@@ -450,5 +451,11 @@ export const CERTIFICATESINFO: CertificateCardProps[] = [
         label: 'SQL Advanced',
         year:'16 Feb, 2025',
         pic: sqlAdvanced
+    },
+    {
+        id:1007,
+        label: 'Javascript Intermediate',
+        year:'16 Feb, 2025',
+        pic: jsIntermediate
     }
 ]
